@@ -1,6 +1,6 @@
 
 import { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 
 
@@ -15,7 +15,7 @@ const Navber = () => {
   </>
     return (
 
-    <div className="navbar sticky -top-2 z-20 bg-opacity-30 h-20 bg-white static:text-white ">
+    <div className="navbar sticky -top-2 z-20 bg-opacity-30 h-20 bg-white static:text-white  ">
     <div className="navbar-start ">
       <div className="dropdown">
         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ const Navber = () => {
       </div>
       
       <img className='lg:w-28 md:w-32 w-20' src="https://i.ibb.co/0nShLXT/Community-Logo-1.png" alt="" />
-      <a className="text-gray-600 normal-case font-bold mt-1 -ml-3 lg:text-sm md:text-sm text-[10px] ">Bogura Cantonment Board High School Alumni Association</a>
+      <a className="text-gray-600 normal-case font-bold mt-1 -ml-3 lg:text-sm md:text-sm text-[10px] ">BCBHS Alumni Association</a>
     </div>
     <div className="navbar-center  hidden lg:flex">
       <ul className="menu menu-horizontal px-1">
@@ -104,6 +104,7 @@ const Navber = () => {
               </div>
             </div>
           ) : (
+              <div>
             <NavLink
               to="/login"
               className={({ isActive }) =>
@@ -111,7 +112,12 @@ const Navber = () => {
               }
             >
               Login
-            </NavLink>
+                </NavLink>
+ 
+              
+              
+              </div>
+          
           )}
     </div>
   </div>
