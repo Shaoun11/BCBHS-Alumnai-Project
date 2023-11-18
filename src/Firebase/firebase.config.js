@@ -2,20 +2,21 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBuVA17m83GGCff4LZq6BubS28con0w010",
-  authDomain: "bcbhs-3dbde.firebaseapp.com",
-  projectId: "bcbhs-3dbde",
-  storageBucket: "bcbhs-3dbde.appspot.com",
-  messagingSenderId: "238907420964",
-  appId: "1:238907420964:web:42e7566466396cb92a43b1",
+  apiKey: "AIzaSyB4dWXByLDgTdBBwPZGPZpSpJZvX6RbLeQ",
+  authDomain: "cnceptual-project-51.firebaseapp.com",
+  databaseURL: "https://cnceptual-project-51-default-rtdb.firebaseio.com",
+  projectId: "cnceptual-project-51",
+  storageBucket: "cnceptual-project-51.appspot.com",
+  messagingSenderId: "710237726792",
+  appId: "1:710237726792:web:09b34bc288552b55e9107d"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 
-
-export default app;
+export default auth;

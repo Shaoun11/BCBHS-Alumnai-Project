@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import { Outlet } from 'react-router-dom';
 
 
@@ -6,6 +7,7 @@ const MainLayout = () => {
         <div>
           
            <Outlet></Outlet>
+           <Toaster></Toaster>
         </div>
     );
 };

@@ -1,20 +1,22 @@
 
 import { useContext } from 'react';
 import {  NavLink } from 'react-router-dom';
-import { AuthContext } from '../../Authprovider/Authprovider';
+import { Authcontext } from '../../Authprovider/Authprovider';
+
 
 
 
 const Navber = () => {
-      const { user, logOut } = useContext(AuthContext);
+      const { user, logout } = useContext(Authcontext);
 
       const handelSingout = () => {
-        logOut().then().catch();
+        logout().then().catch();
       };
     const link=<>
     <li><NavLink to={"/"}>Home</NavLink></li>
    <li><NavLink to={"/event"}> Event </NavLink></li>
     <li><NavLink to={"/About"}>About</NavLink></li>
+    <li><NavLink to={"/alumniDatabase"}>Alumni Database</NavLink></li>
     
 
   </>

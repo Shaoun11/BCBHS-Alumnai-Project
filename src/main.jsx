@@ -7,6 +7,7 @@ import Home from './Components/Home/Home.jsx'
 import Login from './Components/Login/Login.jsx'
 import Register from './Components/Register/Register.jsx'
 import AuthProvider from './Authprovider/Authprovider.jsx'
+import Database from './Database/Database.jsx'
 
 
 const router=createBrowserRouter([{
@@ -25,6 +26,11 @@ const router=createBrowserRouter([{
     {
     path:"/register",
     element:<Register></Register>
+  }
+  ,
+    {
+    path:"/alumniDatabase",
+    element:<Database></Database>
   }
   
   
