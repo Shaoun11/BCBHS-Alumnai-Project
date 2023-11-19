@@ -1,110 +1,48 @@
-import React from 'react';
-
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
 const DatabaseCard = ({data}) => {
-    const{name,image,profession,email,roll,sscbatch}=data;
+    const{name,image,profession,email,roll,sscbatch,fbUrl,linkedinUrl}=data;
     return (
-        <div>
-       {/* <table className="min-w-full leading-normal">
-                      
-                     
-                           
-                        <tbody className='bordere-e-2 border-collapse '>
-                           
-                           <tr>
-                                              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                  <div className="flex items-center">
-                                                      <div className="flex-shrink-0 w-10 h-10">
-                                                          <img className="w-full h-full rounded-full"
-                                                              src={image}
-                                                              alt="" />
-                                                      </div>
-                                                      <div className="ml-3">
-                                                          <p className="text-gray-900 whitespace-no-wrap">
-                                                            {name}
-                                                          </p>
-                                                      </div>
-                                                  </div>
-                                              </td>
-                                              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                  <p className="text-gray-900 whitespace-no-wrap">{sscbatch}</p>
-                                              </td>
-                                              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                  <p className="text-gray-900 whitespace-no-wrap">
-                                                      {email}
-                                                  </p>
-                                              </td>
-                                              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                  <span
-                                                      className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                                      <span aria-hidden
-                                                          className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                                      <span className="relative">{roll}</span>
-                                                  </span>
-                                              </td>
-                                              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                  <span
-                                                      className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                                      <span aria-hidden
-                                                          className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                                      <span className="relative">{profession}</span>
-                                                  </span>
-                                              </td>
-                                              <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                                  <span
-                                                      className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                                      <span aria-hidden
-                                                          className="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                                      <span className="relative">Activo</span>
-                                                  </span>
-                                              </td>
-                                          </tr>   
-                                          
-                                         </tbody>
-                               
-                            
-                       
-                    </table> */}
-                    <div className="overflow-x-auto">
-  <table className="table">
-    {/* head */}
-   
-    <tbody>
-      {/* row 1 */}
-      <tr>
-       
-        <td>
-          <div className="flex items-center gap-3">
-            <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
-                <img src={image} />
-              </div>
-            </div>
-            <div>
-              <div className="font-bold">{name}</div>
-              <div className="text-sm opacity-50">United States</div>
-            </div>
-          </div>
-        </td>
-        <td>
-          {sscbatch}
-          <br/>
-
-        </td>
-        <td>{email}</td>
-        <td>{roll}</td>
-        <td>{profession}</td>
-        <th>
-          <button className="btn btn-ghost btn-xs">details</button>
-        </th>
-      </tr>
-     
-     
-    </tbody>
-    
-    
-  </table>
-</div>
-        </div>
+       <div>
+        <body className="flex items-center justify-center">
+	<div className="container">
+		<table className="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden  sm:shadow my-1">
+			<thead className="text-white">
+				<tr className="bg-teal-400 flex md:hidden visible flex-col flex-no wrap sm:table-row rounded-l-lg sm:rounded-none mb-3 sm:mb-0">
+					<th className="p-[20px] text-left">Name</th>
+					<th className=" p-[12px] text-left">Batch</th>
+					<th className="p-[11px] text-left">Email</th>
+					<th className="p-[11.5px] text-left">Last Roll</th>
+					<th className="p-[11px] text-left" >Profession</th>
+					<th className="p-[8px] text-left " >Social</th>
+					<th className="p-3  text-left " >Details</th>
+				</tr>
+				
+			</thead>
+			<tbody className="flex-1 sm:flex-none">
+            <tr className="flex flex-col  flex-no wrap sm:table-row mb-2 sm:mb-0">
+					<td className="border-grey-light  md:w-[270px]  border hover:bg-gray-100 p-3">
+                  <div className="flex  gap-3 font-semibold">
+                  <div>
+                  <img className="w-10 h-10 rounded-full" src={image} alt="User Data"/>
+                  </div>
+                    <h1 className="mt-[6px]">{name}</h1>
+                  </div>
+                        </td>
+					<td className="border-grey-light md:w-[150px] border hover:bg-gray-100 p-3 truncate">{sscbatch}</td>
+					<td className="border-grey-light md:w-[300px] border hover:bg-gray-100 p-3 truncate">{email}</td>
+					<td className="border-grey-light border md:w-[150px] hover:bg-gray-100 p-3 truncate">{roll}</td>
+					<td className="border-grey-light border md:w-[207px] hover:bg-gray-100  p-3 truncate">{profession}</td>
+	
+					<td className="border-grey-light border flex gap-2 text-lg flex-row  hover:bg-gray-100 p-3 truncate"> <FaFacebook className="text-blue-600" ></FaFacebook> <FaLinkedin  className="text-[#0a66c2] "></FaLinkedin> </td>
+					<td className="border-grey-light border md:w-[100px] hover:bg-gray-100 p-3 truncate">Details</td>
+					
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+</body>
+       </div>
     );
 };
 

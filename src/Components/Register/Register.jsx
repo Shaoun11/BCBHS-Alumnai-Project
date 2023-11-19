@@ -18,7 +18,7 @@ const Register = () => {
   const [error,seterror]=useState('')
     const [success,setsuccess]=useState('')
   const navigate = useNavigate();
- 
+ console.log(user);
 
   const handelRegister = async (e) => {
     e.preventDefault();
@@ -85,7 +85,7 @@ const Register = () => {
           handleUpdateProfile(name, image)
           .then(()=>{
              
-              toast.success('Registation Successfully!')
+             
               window.location.reload();
              
               
@@ -112,7 +112,7 @@ const Register = () => {
          
 
         fetch("http://localhost:5001/userData", {
-          method: "POST",
+          method: "Post",
           headers: {
             "Content-Type": "application/json",
           },
@@ -135,6 +135,7 @@ const Register = () => {
           console.log(errorCode);
         });
         navigate("/")
+         toast.success('Registation Successfully!')
 
   };
    
