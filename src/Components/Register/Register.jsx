@@ -86,7 +86,7 @@ const Register = () => {
           .then(()=>{
              
              
-              window.location.reload();
+             
              
               
         const addData = {
@@ -111,7 +111,7 @@ const Register = () => {
        
          
 
-        fetch("http://localhost:5001/userData", {
+        fetch("https://bcbhs-server.vercel.app/userData", {
           method: "Post",
           headers: {
             "Content-Type": "application/json",
@@ -121,6 +121,9 @@ const Register = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
+            navigate("/")
+            window.location.reload();
+            toast.success('Registation Successfully!')
           });
               
           })
@@ -134,8 +137,8 @@ const Register = () => {
           console.log(errorMessage);
           console.log(errorCode);
         });
-        navigate("/")
-         toast.success('Registation Successfully!')
+       
+       
 
   };
    
