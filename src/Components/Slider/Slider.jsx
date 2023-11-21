@@ -9,8 +9,8 @@ const Slider = () => {
   return (
       <div>
            <div >
-          <div className="carousel sm:w-full w-[410px] h-[500px] sm:h-[800px] ">
-<div id="slide1" className="carousel-item relative sm:w-full w-[410px] h-[500px] sm:h-[800px] ">
+          <div className="carousel sm:w-full w-[420px] h-[500px] sm:h-[800px] ">
+<div id="slide1" className="carousel-item relative sm:w-full w-[420px] h-[500px] sm:h-[800px] ">
   <img src='https://i.ibb.co/2nV8vY4/12052022-120822-Time-To-Fly-by-Ayan.jpg' className="sm:w-full object-cover w-[410px] h-[500px] sm:h-[800px]  " />
   <div className="absolute bg-gradient-to-r from-[#0e0c0cc7] to-rgba(21, 21, 25, 0.00) 100%)  flex h-full  top-0 left-0 items-center  ">
   <div className=' pl-16 lg:space-y-7 md:space-y-5  space-y-3 w-1/2'>

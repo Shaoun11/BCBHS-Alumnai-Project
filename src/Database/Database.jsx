@@ -10,7 +10,7 @@ const Database = () => {
     const [userdata,setuserdata]=useState([]);
     const [loader,setloader]=useState(true)
     useEffect(()=>{
-        axios.get('https://bcbhs-server.vercel.app/userData')
+        axios.get('http://localhost:5001/userData')
         .then((res)=>{
             const userdata=res.data;
             setuserdata(userdata)

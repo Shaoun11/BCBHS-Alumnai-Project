@@ -1,6 +1,6 @@
 
 import { useContext } from 'react';
-import {  NavLink } from 'react-router-dom';
+import {  Link, NavLink } from 'react-router-dom';
 import { Authcontext } from '../../Authprovider/Authprovider';
 
 
@@ -48,11 +48,11 @@ const Navber = () => {
             </ul>
           </div>
 
-          <img
+       <Link to='/'>   <img
             className="lg:w-28 md:w-32 w-20"
             src="https://i.ibb.co/0nShLXT/Community-Logo-1.png"
             alt=""
-          />
+          /></Link>
           <a className="text-gray-600 normal-case font-bold mt-1 -ml-3 lg:text-sm md:text-sm text-[10px] ">
             BCBHS Alumni Association
           </a>
@@ -83,7 +83,7 @@ const Navber = () => {
     
      </div> */}
           {user?.email ? (
-            <div className="dropdown dropdown-end ">
+            <div className="dropdown dropdown-end " >
               <label tabIndex={0} className="cursor-pointer">
                 <div className="flex gap-2">
                   <div className="mt-2">
