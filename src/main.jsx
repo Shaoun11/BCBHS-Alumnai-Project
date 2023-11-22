@@ -9,12 +9,16 @@ import Register from './Components/Register/Register.jsx'
 
 import Database from './Database/Database.jsx'
 import AuthProvider from './Authprovider/Authprovider.jsx'
+<<<<<<< HEAD
 import Profile from './Profile/Profile.jsx'
 import Event from './Event/Event.jsx'
 import PrivateRoute from './Privetrout/PrivetRoute.jsx'
 import Navber from './Components/Navber/Navber.jsx'
 import Deatails from './Deatails.jsx'
 import Error from './Error.jsx'
+=======
+import Event from './Events/Event.jsx'
+>>>>>>> 146e513b3c881e692b95a5096ffe14ed68b99307
 
 
 
@@ -70,7 +74,35 @@ const router = createBrowserRouter([
      
     ],
   },
+<<<<<<< HEAD
 ]);
+=======
+  
+    {
+    path:"/login",
+    element:<Login></Login>
+  },
+    {
+    path:"/register",
+    element:<Register></Register>
+  }
+  ,
+    {
+    path:"/alumniDatabase",
+    element:<Database></Database>
+  },
+    {
+    path:"/events",
+    element:<Event></Event>,
+    loader:()=>fetch('./Events.json')
+  }
+  
+  
+  
+  
+  ]
+}])
+>>>>>>> 146e513b3c881e692b95a5096ffe14ed68b99307
 
 
 
