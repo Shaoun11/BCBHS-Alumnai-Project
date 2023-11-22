@@ -10,31 +10,40 @@ import axios from 'axios';
 
 const Navber = () => {
   const { user, logout } = useContext(Authcontext);
+const [userdata,setdata]=useState([]);
 
-  // const [data, setdata] = useState([])
-  // const [datacart, setdata] = useState(cartdata);
-  
-  //   useEffect(() => {
-  //     axios.get("https://bcbhs-server-site.vercel.app/userData").then((res) => {
-  //       const userdata = res.data;
-  //       setdata(userdata);
+const handelSingout = () => {
+  logout().then().catch();
+};
 
-  //     });
-  //   }, []);
+
+
+
   
-  // useEffect(() => {
-  //   const cartfilter = datacart?.filter((cart) => cart.email == cartemail);
-  //   setcart(cartfilter);
-  // }, [datacart, cartemail]);
+    useEffect(() => {
+      axios.get("https://bcbhs-server-site.vercel.app/userData").then((res) => {
+        const userdata = res.data;
+        setdata(userdata);
   
 
-  const handelSingout = () => {
-    logout().then().catch();
-  };
+      });
+    }, []);
+  
+    console.log(userdata);
+    const users=user?.displayName;
+    const filteredUsers = userdata.filter((items)=>items?.name==users);
+    console.log(filteredUsers);
+   
+
+
+  
   const link = (
     <>
       <li>
         <NavLink to={"/"}>Home</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/alumniDatabase"}>Alumni Database</NavLink>
       </li>
       <li>
         <NavLink to={"/event"}> Event </NavLink>
@@ -42,9 +51,7 @@ const Navber = () => {
       <li>
         <NavLink to={"/About"}>About</NavLink>
       </li>
-      <li>
-        <NavLink to={"/alumniDatabase"}>Alumni Database</NavLink>
-      </li>
+      
     </>
   );
   return (
@@ -130,12 +137,11 @@ const Navber = () => {
               tabIndex={0}
               className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <NavLink
-             
-                className="px-4 py-2 hover:bg-base-300 rounded-lg"
-              >
-                My Profile
-              </NavLink>
+               {filteredUsers.map(product => (
+          <li key={product._id}>
+            <NavLink to={`/profile/${product._id}`}>My Profile</NavLink>
+          </li>
+        ))}
 
               <div
                 onClick={handelSingout}
@@ -143,7 +149,7 @@ const Navber = () => {
               >
                 Logout
               </div>
-            </div>
+            </div> 
           </div>
         ) : (
           <div>

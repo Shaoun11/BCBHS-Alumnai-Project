@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const Event = () => {
   const [data, setdata] = useState([]);
   useEffect(() => {
-    fetch("./Events.json")
+    fetch("https://bcbhs-server-site.vercel.app/eventData")
       .then((res) => res.json())
       .then((data) => setdata(data));
   }, []);

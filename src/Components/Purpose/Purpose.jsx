@@ -60,12 +60,8 @@ const Purpose = () => {
           </h1>
         </div>
         <div>
-          <img
-            className="w-[700px] h-[600px] rounded-e-box"
-            src="https://i.ibb.co/kJ2Q3jL/IMG-20231116-WA0003-1.jpg"
-            alt=""
-          />
-        </div>
+            <img className='w-[700px] md:h-[600px] h-[460px] rounded-lg md:rounded-e-box' src="https://i.ibb.co/YcQsRVF/goals-1.png" alt="" />
+            </div> 
       </div>
     );
 };

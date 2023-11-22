@@ -12,6 +12,9 @@ import AuthProvider from './Authprovider/Authprovider.jsx'
 import Profile from './Profile/Profile.jsx'
 import Event from './Event/Event.jsx'
 import PrivateRoute from './Privetrout/PrivetRoute.jsx'
+import Navber from './Components/Navber/Navber.jsx'
+import Deatails from './Deatails.jsx'
+import Error from './Error.jsx'
 
 
 
@@ -19,6 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: "/",
@@ -41,6 +45,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path:"/",
+        element:<Navber></Navber>,
+        loader:()=>fetch('https://bcbhs-server-site.vercel.app/userData') 
+      },
 
       {
         path: "/profile/:id",
@@ -51,8 +60,13 @@ const router = createBrowserRouter([
       {
         path: "/events",
         element: <Event></Event>,
-        loader: () => fetch("./Events.json"),
+        loader: () => fetch("http://localhost:5001/eventData"),
       },
+      {
+        path: "/details/:id",
+        element:<Deatails></Deatails>,
+       loader:({params})=>fetch(`https://bcbhs-server-site.vercel.app/eventData/${params.id}`)
+      }
      
     ],
   },

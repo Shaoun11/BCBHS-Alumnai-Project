@@ -3,7 +3,7 @@
 import { Link } from "react-router-dom";
 
 const EventsCard = ({ events }) => {
-  const { img, date, status, description, title, name, authorImg } = events;
+  const { img, date, status,_id, description, title, name, authorImg } = events;
   return (
     <div
       data-aos="fade-up"
@@ -66,9 +66,9 @@ const EventsCard = ({ events }) => {
         </div>
         <Link>
           {" "}
-          <button className="btn w-full text-white btn-warning bg-red-500  mt-6 ">
+          <Link to={`details/${_id}`}><button className="btn w-full text-white btn-warning bg-red-500  mt-6 ">
             Read More
-          </button>
+          </button></Link>
         </Link>
       </div>
     </div>

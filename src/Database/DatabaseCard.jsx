@@ -31,9 +31,9 @@ const DatabaseCard = ({data}) => {
                   <th className="p-[20px] text-left">Name</th>
                   <th className=" p-[12px] text-left">Batch</th>
                   <th className="p-[11px] text-left">Email</th>
-                  <th className="p-[11.5px] text-left">Last Roll</th>
+                  <th className="p-[11px] text-left">Last Roll</th>
                   <th className="p-[11px] text-left">Profession</th>
-                  <th className="p-[18px] text-left ">Social</th>
+                  <th className="p-[14px] text-left ">Social</th>
                   <th className="p-3  text-left ">Details</th>
                 </tr>
               </thead>
@@ -66,12 +66,16 @@ const DatabaseCard = ({data}) => {
 
                   <td className="border-grey-light border flex gap-2 text-lg flex-row   p-3 truncate">
                     {" "}
-                    <FacebookShareButton className="mt-2">
-                      <FacebookIcon size={26} round />
-                    </FacebookShareButton>
-                    <LinkedinShareButton url={linkedinUrl} className="mt-2">
-                      <LinkedinIcon size={26} round />
-                    </LinkedinShareButton>
+                  <a href={shareUrl} target="blank" >
+                    
+                  <FacebookIcon size={26} round />
+                  </a>
+                 
+                    
+                    <a href={linkedinUrl} target="blank">
+                    <LinkedinIcon size={26} round />
+                    </a>
+                 
                   </td>
                   <td className="border-grey-light border md:w-[100px] hover   p-3 truncate">
                     {" "}

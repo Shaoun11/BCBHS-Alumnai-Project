@@ -44,7 +44,7 @@ currentJob,
           <div className="flex flex-col items-center -mt-20">
             <img
               src={image}
-              className="w-40 h-40 border-4 border-white rounded-full"
+              className="w-40 object-cover h-40 border-4 border-white rounded-full"
             />
             <div className="flex items-center space-x-2 mt-2">
               <p className="text-2xl">{name}</p>
@@ -115,28 +115,28 @@ currentJob,
                   <span className="font-bold mx-3">: </span>
                   <span className="text-gray-700">{profession}</span>
                 </li>
-              { profession !== "Student"  &&  <div>
+             <div>
                   <li className="flex border-b py-2">
                     <span className="font-bold w-28">Current Job</span>{" "}
                     <span className="font-bold mx-3">: </span>
-                    <span className="text-gray-700">{currentJob}</span>
+                    <span className="text-gray-700">{currentJob?currentJob:<><p className="text-sm font-semibold text-red-500">No Data </p></>}</span>
                   </li>
                   <li className="flex border-b py-2">
                     <span className="font-bold w-28">Job Roll</span>{" "}
                     <span className="font-bold mx-3">: </span>
-                    <span className="text-gray-700">{jobRole ? jobRole : "No Data"} </span>
+                    <span className="text-gray-700">{jobRole ? jobRole : <><p className="text-sm font-semibold text-red-500">No Data </p></>} </span>
                   </li>
                   <li className="flex border-b py-2">
                     <span className="font-bold w-28">Previous Job</span>{" "}
                     <span className="font-bold mx-3">: </span>
-                    <span className="text-gray-700">{pastJob}</span>
+                    <span className="text-gray-700">{pastJob? pastJob :<><p className="text-sm font-semibold text-red-500">No Data </p></>}</span>
                   </li>
                   <li className="flex border-b py-2">
                     <span className="font-bold w-28">Job Roll</span>{" "}
                     <span className="font-bold mx-3">: </span>
-                    <span className="text-gray-700">{pastJobRoll}</span>
+                    <span className="text-gray-700">{pastJobRoll?pastJobRoll:<><p className="text-sm font-semibold text-red-500">No Data </p></>}</span>
                   </li>{" "}
-              </div>}
+              </div>
                 <li className="flex items-center border-b py-2 space-x-2">
                   <span className="font-bold w-28">Social </span>{" "}
                   <span className="font-bold mx-3"> :</span>

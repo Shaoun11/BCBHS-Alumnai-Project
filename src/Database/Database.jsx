@@ -38,11 +38,11 @@ const Database = () => {
 
         <div>
           <div>
-            <h1 className="md:text-5xl text-2xl text-center font-semibold mt-5 mb-16 ">
+            <h1 className="md:text-5xl text-3xl text-center font-semibold mt-5 mb-16 ">
               Our <span className="text-red-500">Alumni</span> Database
             </h1>
-            <div className=" flex justify-center mt-3 ">
-              <div className="sm:flex items-center bg-white rounded-lg overflow-hidden px-2 py-1 justify-between  w-1/2 shadow-lg ">
+            <div className=" md:flex  flex justify-center mt-3 ">
+              <div className="sm:flex flex w-11/12 items-center bg-white rounded-lg overflow-hidden px-2 py-1 justify-between  md:w-1/2 shadow-lg ">
                 <input
                   className="text-base text-gray-400 flex-grow outline-none px-2 py-3"
                   onChange={(e) => setsearch(e.target.value)}
@@ -50,7 +50,7 @@ const Database = () => {
                   name="search"
                   placeholder="Search by name"
                 />
-                <div className="ms:flex items-center px-2 py-1  rounded-lg space-x-4 mx-auto">
+                <div className="ms:flex flex  items-center px-2 py-1  rounded-lg space-x-4 mx-auto">
                   <FiSearch className="text-xl"></FiSearch>
                 </div>
               </div>
