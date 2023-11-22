@@ -12,7 +12,7 @@ import AuthProvider from './Authprovider/Authprovider.jsx'
 import Profile from './Profile/Profile.jsx'
 import Event from './Event/Event.jsx'
 import PrivateRoute from './Privetrout/PrivetRoute.jsx'
-import Navber from './Components/Navber/Navber.jsx'
+
 
 
 const router = createBrowserRouter([

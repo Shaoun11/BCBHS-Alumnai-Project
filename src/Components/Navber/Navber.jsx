@@ -3,6 +3,7 @@
 import { useContext, useEffect, useState } from 'react';
 import {  Link, NavLink } from 'react-router-dom';
 import { Authcontext } from '../../Authprovider/Authprovider';
+import axios from 'axios';
 
 
 
@@ -10,7 +11,22 @@ import { Authcontext } from '../../Authprovider/Authprovider';
 const Navber = () => {
   const { user, logout } = useContext(Authcontext);
 
+  // const [data, setdata] = useState([])
+  // const [datacart, setdata] = useState(cartdata);
+  
+  //   useEffect(() => {
+  //     axios.get("https://bcbhs-server-site.vercel.app/userData").then((res) => {
+  //       const userdata = res.data;
+  //       setdata(userdata);
 
+  //     });
+  //   }, []);
+  
+  // useEffect(() => {
+  //   const cartfilter = datacart?.filter((cart) => cart.email == cartemail);
+  //   setcart(cartfilter);
+  // }, [datacart, cartemail]);
+  
 
   const handelSingout = () => {
     logout().then().catch();

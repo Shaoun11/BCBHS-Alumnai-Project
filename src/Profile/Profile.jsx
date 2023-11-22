@@ -124,7 +124,7 @@ currentJob,
                   <li className="flex border-b py-2">
                     <span className="font-bold w-28">Job Roll</span>{" "}
                     <span className="font-bold mx-3">: </span>
-                    <span className="text-gray-700">{jobRole}</span>
+                    <span className="text-gray-700">{jobRole ? jobRole : "No Data"} </span>
                   </li>
                   <li className="flex border-b py-2">
                     <span className="font-bold w-28">Previous Job</span>{" "}
