@@ -19,7 +19,7 @@ const Database = () => {
       const searchQuery = search.toLowerCase();
 
     useEffect(()=>{
-        axios.get('http://localhost:5001/userData')
+        axios.get('https://bcbhs-server-site.vercel.app/userData')
         .then((res)=>{
             const userdata=res.data;
             setuserdata(userdata)

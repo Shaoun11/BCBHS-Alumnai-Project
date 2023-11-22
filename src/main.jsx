@@ -11,6 +11,8 @@ import Database from './Database/Database.jsx'
 import AuthProvider from './Authprovider/Authprovider.jsx'
 import Profile from './Profile/Profile.jsx'
 import Event from './Event/Event.jsx'
+import PrivateRoute from './Privetrout/PrivetRoute.jsx'
+import Navber from './Components/Navber/Navber.jsx'
 
 
 const router = createBrowserRouter([
@@ -33,20 +35,25 @@ const router = createBrowserRouter([
       },
       {
         path: "/alumniDatabase",
-        element: <Database></Database>,
+        element: (
+          <PrivateRoute>
+            <Database></Database>
+          </PrivateRoute>
+        ),
       },
 
       {
         path: "/profile/:id",
         element: <Profile></Profile>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5001/userData/${params.id}`),
+          fetch(`https://bcbhs-server-site.vercel.app/userData/${params.id}`),
       },
       {
         path: "/events",
         element: <Event></Event>,
         loader: () => fetch("./Events.json"),
       },
+     
     ],
   },
 ]);

@@ -19,7 +19,7 @@ const Gallery = () => {
     attemptPlay();
   }, []);
     return (
-      <div data-aos="fade-up" className="  px-5 py-2 lg:px-32 lg:pt-24">
+      <div  className="  px-5 py-2 lg:px-32 lg:pt-24">
         <h1 className="text-5xl text-center font-semibold mt-8 mb-8 ">
           Our <span className="text-red-500">Emotions</span>
         </h1>

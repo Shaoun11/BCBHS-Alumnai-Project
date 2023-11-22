@@ -5,6 +5,7 @@ import Purpose from '../Purpose/Purpose';
 import Gallery from '../Gallery/Gallery';
 import Event from '../../Event/Event';
 import Marquee from 'react-fast-marquee';
+import Footer from '../../Footer/Footer';
 
 const Home = () => {
     return (
@@ -25,6 +26,9 @@ const Home = () => {
         <Purpose></Purpose>
         <Event></Event>
         <Gallery></Gallery>
+        <div className=" pt-20">
+          <Footer></Footer>
+        </div>
       </div>
     );
 };

@@ -3,7 +3,7 @@
 const Purpose = () => {
     return (
       <div
-        data-aos="fade-up"
+      
         className="flex max-w-7xl mb-12 gap-7 lg:flex-row md:flex-row flex-col mx-auto"
       >
         <div className="space-y-7">

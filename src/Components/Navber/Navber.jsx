@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import {  Link, NavLink } from 'react-router-dom';
 import { Authcontext } from '../../Authprovider/Authprovider';
 
@@ -114,7 +115,7 @@ const Navber = () => {
               className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
             >
               <NavLink
-              
+             
                 className="px-4 py-2 hover:bg-base-300 rounded-lg"
               >
                 My Profile
