@@ -2,7 +2,7 @@
 import EventsCard from "./EventsCard";
 import { useEffect, useState } from "react";
 
-const Event = () => {
+const Events = () => {
   const [data, setdata] = useState([]);
   useEffect(() => {
     fetch("https://bcbhs-server-site.vercel.app/eventData")
@@ -28,4 +28,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default Events;

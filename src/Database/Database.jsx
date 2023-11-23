@@ -68,10 +68,10 @@ const Database = () => {
                     <th className="p-3 text-left">Batch</th>
                     <th className="p-3 text-left">Email</th>
 
-                    <th className="p-3 text-left" width="140px">
+                    <th className="p-3 text-left" width="110px">
                       Last Roll
                     </th>
-                    <th className="p-3 text-left" width="140px">
+                    <th className="p-3 text-left" width="160px">
                       Profession
                     </th>
                     <th className="p-3 text-left" width="100px">
